@@ -17,7 +17,9 @@
     "bundle-vue": "NODE_ENV=production rollup -c vue/rollup.config.js",
     "bundle-inferno": "NODE_ENV=production rollup -c inferno/rollup.config.js",
     "minify": "node minify.js",
-    "http-server": "http-server"
+    "http-server": "http-server",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Patrick Steele-Idem <pnidem@gmail.com>",
   "license": "MIT",
@@ -52,7 +54,8 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "uglify-js": "^2.7.5",
     "vue": "^2.1.6",
-    "vueify": "^9.4.0"
+    "vueify": "^9.4.0",
+    "snyk": "^1.316.1"
   },
   "repository": {
     "type": "git",
@@ -61,5 +64,6 @@
   "browser": {
     "events": "events-light"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "snyk": true
 }
